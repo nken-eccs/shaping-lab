@@ -186,10 +186,10 @@ fn shape_many(font: shaping_core::Font) -> anyhow::Result<()> {
 本体の変更はlocalとoptimizedの両方に反映
 未変更のHarfRustは`lab.py upstream`で別に実行
 
-## 取り込み元
+## ライセンス
 
-HarfRust 0.15.0の[71d96513](https://github.com/harfbuzz/harfrust/tree/71d965130ea93905f81b8f03a03d7ecc794fbc47)
-[MITライセンスと著作権表示](core/LICENSE)を保持
+`core/`は[HarfRust 0.15.0](https://github.com/harfbuzz/harfrust/tree/71d965130ea93905f81b8f03a03d7ecc794fbc47)を基にしています
+[MITライセンス](core/LICENSE)に基づいて利用しています
 
 本体72ファイルを36ファイルに統合し 再利用APIを1ファイルで追加
 stdと組み込みUnicode表に固定し ICUとno_stdの分岐を削除
