@@ -1,0 +1,9 @@
+/target/
+/vendor/*
+/results/*
+/docs/
+__pycache__/
+.DS_Store
+*.trace
+perf.data*
+flamegraph.svg

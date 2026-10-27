@@ -1,0 +1,23 @@
+[package]
+name = "shaping-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.95"
+publish = false
+license = "MIT"
+
+[package.metadata.origin]
+crate = "harfrust"
+version = "0.15.0"
+revision = "71d965130ea93905f81b8f03a03d7ecc794fbc47"
+
+[features]
+trace = []
+
+[dependencies]
+anyhow = "1"
+bitflags = "2.9"
+bytemuck = { version = "1.22", features = ["extern_crate_alloc", "min_const_generics"] }
+read-fonts = { version = "=0.46.0", default-features = false, features = ["std"] }
+smallvec = "1.14"
+yoke = { version = "0.8", default-features = false, features = ["alloc", "derive"] }

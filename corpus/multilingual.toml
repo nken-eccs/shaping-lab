@@ -1,0 +1,213 @@
+schema_version = 1
+
+[fonts.latin]
+path = "../vendor/fonts/notosans.ttf"
+sha256 = "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+
+[fonts.japanese]
+path = "../vendor/fonts/notosansjp.ttf"
+sha256 = "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f"
+
+[fonts.arabic]
+path = "../vendor/fonts/notosansarabic.ttf"
+sha256 = "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+
+[fonts.devanagari]
+path = "../vendor/fonts/notosansdevanagari.ttf"
+sha256 = "14ec4af41f27482216d1c2229f417ff9b1425e1babb014e57d1d40d03229853e"
+
+[fonts.hebrew]
+path = "../vendor/fonts/notosanshebrew.ttf"
+sha256 = "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+
+[fonts.thai]
+path = "../vendor/fonts/notosansthai.ttf"
+sha256 = "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8"
+
+[fonts.serif]
+path = "../vendor/harfrust-upstream/harfrust/benches/fonts/SourceSerifVariable-Roman.ttf"
+sha256 = "dc2e1afa4f67546bbd9bc2f6515a00c000042a4b8d99f825a0fcad656ed83170"
+
+[fonts.roboto]
+path = "../vendor/harfrust-upstream/harfrust/benches/fonts/Roboto-Regular.ttf"
+sha256 = "797e35f7f5d6020a5c6ea13b42ecd668bcfb3bbc4baa0e74773527e5b6cb3174"
+
+[fonts.amiri]
+path = "../vendor/harfrust-upstream/harfrust/benches/fonts/Amiri-Regular.ttf"
+sha256 = "d61859123dae849f411df5aff58d13f27218621141bb208446785d84b6a3c733"
+
+[fonts.nastaliq]
+path = "../vendor/harfrust-upstream/harfrust/benches/fonts/NotoNastaliqUrdu-Regular.ttf"
+sha256 = "c598f61cc40ff27ff94858271f0bc000bc4529be0dad364b7a1b3118f5da8e02"
+
+[[cases]]
+id = "mixed-long"
+description = "Twenty-four languages and ten fonts"
+
+[[cases.runs]]
+font = "latin"
+text = "The reading room brings together books written in many languages. Each paragraph has its own voice, yet the page should remain comfortable to read from the first line to the last. A designer chooses a typeface, a size and a direction before the letters become positioned glyphs. The next paragraph may use another alphabet or a different font. Spaces, accents, ligatures and punctuation all take part in the result. We compare these passages as one document and keep their original order while measuring the work. "
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases.runs]]
+font = "japanese"
+text = "図書館の机にはさまざまな言語で書かれた本が並んでいる。日本語の段落のあとにアラビア語の文章が続き、その隣には別の書体で組まれた欧文の注釈がある。読み手が自然に視線を移せるように、文字の形と間隔を丁寧に整える。見出し、本文、引用、数字、括弧、長音記号なども、それぞれの文脈の中で扱う必要がある。文章が長くなると同じ文字が何度も現れる一方で、初めて使う文字も少しずつ増えていく。この文章では複数の文字体系とフォントを交互に使い、段落全体の処理と短い範囲を繰り返し処理する場合の違いを測定する。最後まで同じ順序を保ちながら、各段落を独立した入力として扱う。 "
+direction = "ltr"
+script = "Hani"
+language = "ja"
+
+[[cases.runs]]
+font = "arabic"
+text = "في قاعة القراءة تجتمع كتب مكتوبة بلغات كثيرة، ولكل فقرة إيقاعها وطريقتها في التعبير. يختار المصمم الخط والحجم واتجاه الكتابة قبل ترتيب الحروف على الصفحة. قد تأتي بعد هذه الفقرة جملة بلغة أخرى، ثم يعود القارئ إلى النص العربي دون أن يفقد مكانه. نراقب اتصال الحروف ومواضع الحركات والمسافات بين الكلمات، ونحتفظ بترتيب الفقرات عند معالجة المستند كله. هذه تجربة لقراءة نص طويل تتغير فيه اللغة والخط مرارًا مع بقاء المحتوى واضحًا ومتصلًا. "
+direction = "rtl"
+script = "Arab"
+language = "ar"
+
+[[cases.runs]]
+font = "devanagari"
+text = "पुस्तकालय की मेज पर अनेक भाषाओं में लिखी हुई पुस्तकें रखी हैं। हर अनुच्छेद की अपनी लय है और हर लिपि में अक्षरों के जुड़ने का तरीका अलग दिखाई देता है। पाठक को सहज अनुभव देने के लिए अक्षरों के रूप और उनकी स्थिति को सावधानी से निर्धारित करना आवश्यक है। इस प्रयोग में हम पूरे दस्तावेज़ को पढ़ते हैं और फिर उसी सामग्री को छोटे भागों में संसाधित करते हैं। मात्राएँ, संयुक्ताक्षर, विराम चिह्न और शब्दों के बीच की दूरी भी परिणाम का हिस्सा हैं। सभी अनुच्छेद अपने मूल क्रम में रखे जाते हैं। "
+direction = "ltr"
+script = "Deva"
+language = "hi"
+
+[[cases.runs]]
+font = "serif"
+text = "Dans la salle de lecture, les livres se répondent sans partager la même langue. Une page française côtoie un passage japonais, puis une note composée dans une autre police. Le lecteur suit les phrases et retrouve les accents, les espaces et les signes qui lui sont familiers. Nous préparons un document assez long pour observer le travail répété sur les caractères. Chaque paragraphe conserve son ordre et sa langue. Les titres, les citations et les explications forment ainsi une suite variée dont la composition peut être mesurée avec précision. "
+direction = "ltr"
+script = "Latn"
+language = "fr"
+
+[[cases.runs]]
+font = "thai"
+text = "ในห้องอ่านหนังสือมีหนังสือจากหลายภาษาเรียงอยู่บนโต๊ะ แต่ละย่อหน้ามีจังหวะและรูปแบบการเขียนของตนเอง ผู้อ่านควรติดตามข้อความได้อย่างต่อเนื่องแม้ว่าภาษาและแบบอักษรจะเปลี่ยนไป การทดลองนี้ใช้ข้อความยาวที่ประกอบด้วยหลายย่อหน้า แล้วนำเนื้อหาเดียวกันมาแบ่งเป็นช่วงสั้นเพื่อเปรียบเทียบเวลาในการประมวลผล เราสังเกตตำแหน่งของสระ วรรณยุกต์ และระยะห่างระหว่างส่วนต่าง ๆ ของข้อความ โดยเก็บลำดับของทุกย่อหน้าไว้เหมือนเดิมตลอดการทดลอง "
+direction = "ltr"
+script = "Thai"
+language = "th"
+
+[[cases.runs]]
+font = "latin"
+text = "В читальном зале рядом лежат книги на разных языках. У каждого абзаца есть свой ритм, а у каждой письменности свои правила соединения и расположения букв. Читатель переходит от одной страницы к другой и замечает знакомые знаки, пробелы и ударения. В этом опыте длинный документ состоит из отдельных фрагментов с явно выбранными шрифтами. Мы сохраняем порядок текста и сравниваем обработку целых абзацев с обработкой коротких участков. Повторяющиеся буквы позволяют использовать уже подготовленные данные, но каждый фрагмент проходит формирование заново. "
+direction = "ltr"
+script = "Cyrl"
+language = "ru"
+
+[[cases.runs]]
+font = "hebrew"
+text = "בחדר הקריאה מונחים ספרים בשפות רבות, ולכל פסקה יש קצב וצורה משלה. הקורא עובר מטקסט אחד לאחר ומזהה אותיות, רווחים וסימני פיסוק מוכרים. המעצב בוחר גופן, גודל וכיוון כתיבה לפני קביעת צורת האותיות ומקומן בשורה. בניסוי הזה אנחנו שומרים על סדר הפסקאות ומשווים בין עיבוד של קטעים ארוכים לעיבוד של חלקים קצרים. המסמך כולל מילים חוזרות וגם צירופים חדשים, כך שאפשר לבדוק כיצד השימוש החוזר בנתוני הגופן משפיע על זמן העבודה. "
+direction = "rtl"
+script = "Hebr"
+language = "he"
+
+[[cases.runs]]
+font = "roboto"
+text = "Im Lesesaal liegen Bücher in vielen Sprachen nebeneinander. Jeder Absatz hat einen eigenen Rhythmus, und jede Schrift stellt andere Anforderungen an die Form und die Position der Zeichen. Beim Wechsel zwischen den Abschnitten soll der Zusammenhang erhalten bleiben. Für diesen Versuch verwenden wir einen längeren Text mit mehreren Schriftarten und ausdrücklich festgelegten Schreibrichtungen. Anschließend teilen wir denselben Inhalt in kurze Abschnitte. So lässt sich beobachten, wie sich die Länge der Abschnitte auf die Verarbeitung auswirkt, während ihre Reihenfolge unverändert bleibt. "
+direction = "ltr"
+script = "Latn"
+language = "de"
+
+[[cases.runs]]
+font = "amiri"
+text = "در اتاق مطالعه کتاب‌هایی به زبان‌های گوناگون کنار هم قرار گرفته‌اند. هر بند آهنگ خود را دارد و هر شیوهٔ نوشتن شکل و جای حروف را به روش خاصی مشخص می‌کند. خواننده از یک بخش به بخش دیگر می‌رود و همچنان رشتهٔ مطلب را دنبال می‌کند. در این آزمایش متن بلندی را با چند قلم آماده کرده‌ایم و همان محتوا را در بخش‌های کوتاه نیز پردازش می‌کنیم. فاصله‌ها، نشانه‌های نگارشی و پیوند میان حروف در نتیجه حضور دارند. ترتیب بندها در تمام مراحل ثابت می‌ماند تا مقایسهٔ زمان پردازش روشن باشد. "
+direction = "rtl"
+script = "Arab"
+language = "fa"
+
+[[cases.runs]]
+font = "latin"
+text = "Trong phòng đọc, những cuốn sách bằng nhiều ngôn ngữ được đặt cạnh nhau. Mỗi đoạn văn có nhịp điệu riêng và mỗi hệ chữ có cách sắp xếp hình dạng cùng vị trí của các ký tự. Người đọc chuyển từ đoạn này sang đoạn khác mà vẫn theo dõi được nội dung. Thử nghiệm này dùng một tài liệu dài với nhiều kiểu chữ được chọn sẵn. Sau đó chúng tôi chia cùng nội dung thành những phần ngắn hơn để đo thời gian xử lý. Các dấu thanh, khoảng trắng và dấu câu đều được giữ lại, còn thứ tự của những đoạn văn luôn không thay đổi. "
+direction = "ltr"
+script = "Latn"
+language = "vi"
+
+[[cases.runs]]
+font = "devanagari"
+text = "वाचनालयाच्या टेबलावर अनेक भाषांमधील पुस्तके ठेवलेली आहेत. प्रत्येक परिच्छेदाची लय वेगळी आहे आणि प्रत्येक लिपीमध्ये अक्षरांचे आकार व त्यांची मांडणी ठरवण्याची पद्धत वेगळी असते. वाचक एका विभागातून दुसऱ्या विभागात जाताना मजकुराचा धागा सहजपणे पकडू शकला पाहिजे. या प्रयोगासाठी विविध अक्षररचना वापरून मोठा दस्तऐवज तयार केला आहे. त्याच मजकुराचे लहान भाग करून प्रक्रिया करण्यासाठी लागणारा वेळही मोजला जातो. मात्रा, जोडाक्षरे आणि विरामचिन्हे यांचा क्रम सर्व मोजमापांमध्ये कायम ठेवला आहे. "
+direction = "ltr"
+script = "Deva"
+language = "mr"
+
+[[cases.runs]]
+font = "serif"
+text = "En la sala de lectura se reúnen libros escritos en muchas lenguas. Cada párrafo tiene un ritmo propio y cada escritura necesita una manera particular de colocar sus letras. El lector cambia de sección sin perder el hilo del documento. Para esta prueba preparamos un texto largo con varias familias tipográficas y conservamos sus espacios, acentos y signos de puntuación. Después procesamos el mismo contenido dividido en fragmentos más breves. El orden permanece fijo para que la comparación del tiempo describa el trabajo sobre los mismos caracteres y las mismas palabras. "
+direction = "ltr"
+script = "Latn"
+language = "es"
+
+[[cases.runs]]
+font = "latin"
+text = "Στην αίθουσα ανάγνωσης βρίσκονται βιβλία γραμμένα σε πολλές γλώσσες. Κάθε παράγραφος έχει τον δικό της ρυθμό και κάθε γραφή χρειάζεται έναν ιδιαίτερο τρόπο για τη μορφή και τη θέση των γραμμάτων. Ο αναγνώστης περνά από το ένα τμήμα στο άλλο χωρίς να χάνει τη συνέχεια του κειμένου. Σε αυτή τη δοκιμή χρησιμοποιούμε ένα μεγάλο έγγραφο με διαφορετικές γραμματοσειρές και διατηρούμε τη σειρά των παραγράφων. Στη συνέχεια χωρίζουμε το ίδιο περιεχόμενο σε μικρότερα τμήματα και μετράμε τον χρόνο της επεξεργασίας τους. "
+direction = "ltr"
+script = "Grek"
+language = "el"
+
+[[cases.runs]]
+font = "nastaliq"
+text = "مطالعے کے کمرے میں کئی زبانوں کی کتابیں ایک ساتھ رکھی ہیں۔ ہر پیراگراف کی اپنی رفتار ہے اور ہر رسم الخط میں حروف کی شکل اور جگہ متعین کرنے کا طریقہ الگ ہے۔ قاری ایک حصے سے دوسرے حصے کی طرف جاتا ہے اور عبارت کا تسلسل برقرار رہتا ہے۔ اس تجربے میں ہم نے مختلف خط استعمال کرتے ہوئے ایک طویل دستاویز تیار کی ہے۔ پھر اسی مواد کو مختصر حصوں میں تقسیم کر کے کام کا وقت ناپتے ہیں۔ الفاظ کے درمیان فاصلے اور رموز اوقاف بھی نتیجے میں شامل رہتے ہیں اور تمام حصوں کی ترتیب تبدیل نہیں کی جاتی۔ "
+direction = "rtl"
+script = "Arab"
+language = "ur"
+
+[[cases.runs]]
+font = "roboto"
+text = "Okuma salonunda birçok dilde yazılmış kitap yan yana durur. Her paragrafın kendine ait bir ritmi vardır ve her yazı sistemi harflerin biçimini ve konumunu farklı kurallarla belirler. Okur bir bölümden diğerine geçerken metnin bütünlüğünü korumak ister. Bu deney için çeşitli yazı tipleriyle uzun bir belge hazırladık. Aynı içeriği daha kısa parçalara ayırarak işlem süresini yeniden ölçüyoruz. Boşluklar, noktalama işaretleri ve Türkçeye özgü harfler korunuyor. Bütün bölümlerin sırası her ölçümde aynı kalıyor. "
+direction = "ltr"
+script = "Latn"
+language = "tr"
+
+[[cases.runs]]
+font = "devanagari"
+text = "पुस्तकालयको टेबलमा विभिन्न भाषामा लेखिएका पुस्तकहरू राखिएका छन्। प्रत्येक अनुच्छेदको आफ्नै लय हुन्छ र प्रत्येक लिपिमा अक्षरको आकार तथा स्थान मिलाउने तरिका फरक हुन्छ। पाठक एउटा खण्डबाट अर्को खण्डमा जाँदा विषयको क्रम बुझ्न सक्नुपर्छ। यस प्रयोगमा धेरै अक्षरशैली प्रयोग गरेर लामो दस्तावेज तयार गरिएको छ। त्यसपछि उही सामग्रीलाई छोटा भागमा विभाजन गरी प्रशोधनको समय तुलना गरिन्छ। मात्रा, संयुक्त अक्षर, खाली ठाउँ र विराम चिह्न सबैलाई जस्ताको तस्तै राखिन्छ र अनुच्छेदहरूको क्रम परिवर्तन गरिँदैन। "
+direction = "ltr"
+script = "Deva"
+language = "ne"
+
+[[cases.runs]]
+font = "latin"
+text = "У читальній залі поруч лежать книжки різними мовами. Кожен абзац має власний ритм, а кожна система письма визначає форму й розташування літер за своїми правилами. Читач переходить від одного розділу до іншого та зберігає зв’язок між частинами тексту. Для цього досліду ми підготували довгий документ із кількома шрифтами. Потім той самий зміст поділяємо на коротші фрагменти й вимірюємо час їх оброблення. Пробіли, розділові знаки та порядок абзаців залишаються незмінними під час кожного вимірювання. "
+direction = "ltr"
+script = "Cyrl"
+language = "uk"
+
+[[cases.runs]]
+font = "serif"
+text = "Na sala de leitura há livros escritos em muitas línguas. Cada parágrafo possui um ritmo próprio e cada sistema de escrita determina de maneira diferente a forma e a posição das letras. O leitor passa de uma seção para outra sem perder a continuidade do documento. Nesta experiência usamos um texto longo com várias famílias de fontes e mantemos os espaços, os acentos e os sinais de pontuação. Depois dividimos o mesmo conteúdo em partes menores para medir novamente o tempo de processamento. A ordem dos parágrafos permanece constante em todas as medições. "
+direction = "ltr"
+script = "Latn"
+language = "pt"
+
+[[cases.runs]]
+font = "roboto"
+text = "I läsesalen ligger böcker på många språk bredvid varandra. Varje stycke har sin egen rytm och varje skriftsystem ställer särskilda krav på bokstävernas form och placering. Läsaren går från ett avsnitt till nästa utan att förlora sammanhanget. I det här försöket använder vi ett långt dokument med flera typsnitt och behåller mellanrum, accenter och skiljetecken. Därefter delar vi samma innehåll i kortare delar och mäter bearbetningstiden igen. Styckenas ordning är densamma under hela jämförelsen och inga delar hoppas över. "
+direction = "ltr"
+script = "Latn"
+language = "sv"
+
+[[cases.runs]]
+font = "latin"
+text = "W czytelni obok siebie leżą książki napisane w wielu językach. Każdy akapit ma własny rytm, a każdy system pisma wymaga innego sposobu określania kształtu i położenia liter. Czytelnik przechodzi między częściami dokumentu i zachowuje ciągłość lektury. W tym doświadczeniu przygotowaliśmy długi tekst z kilkoma rodzinami krojów pisma. Następnie dzielimy tę samą treść na krótsze fragmenty i ponownie mierzymy czas przetwarzania. Spacje, znaki diakrytyczne oraz interpunkcja pozostają na swoich miejscach, podobnie jak kolejność wszystkich akapitów. "
+direction = "ltr"
+script = "Latn"
+language = "pl"
+
+[[cases.runs]]
+font = "serif"
+text = "Nella sala di lettura si incontrano libri scritti in molte lingue. Ogni paragrafo ha un ritmo proprio e ogni sistema di scrittura richiede regole particolari per la forma e la posizione delle lettere. Il lettore passa da una sezione alla successiva senza perdere il filo del documento. Per questa prova abbiamo preparato un testo lungo con diverse famiglie di caratteri. Lo stesso contenuto viene poi diviso in parti più brevi per misurare nuovamente il tempo di elaborazione. Gli spazi, gli accenti e i segni di punteggiatura rimangono presenti e tutti i paragrafi conservano il loro ordine. "
+direction = "ltr"
+script = "Latn"
+language = "it"
+
+[[cases.runs]]
+font = "roboto"
+text = "Di ruang baca terdapat buku dalam banyak bahasa yang diletakkan berdampingan. Setiap paragraf memiliki iramanya sendiri dan setiap sistem tulisan mempunyai aturan untuk menentukan bentuk serta posisi huruf. Pembaca berpindah dari satu bagian ke bagian lain tanpa kehilangan hubungan antarkalimat. Dalam percobaan ini kami memakai dokumen panjang dengan beberapa jenis huruf yang telah dipilih. Isi yang sama kemudian dibagi menjadi bagian lebih pendek untuk mengukur waktu pemrosesan. Spasi, tanda baca dan urutan paragraf tetap dipertahankan selama seluruh pengukuran. "
+direction = "ltr"
+script = "Latn"
+language = "id"
+
+[[cases.runs]]
+font = "serif"
+text = "In de leeszaal liggen boeken in veel verschillende talen naast elkaar. Elke alinea heeft een eigen ritme en elk schrift vraagt om een passende vorm en plaatsing van de letters. De lezer gaat van het ene gedeelte naar het volgende en houdt de samenhang van het document vast. Voor deze proef gebruiken we een lange tekst met verschillende lettertypen. Daarna verdelen we dezelfde inhoud in kortere stukken om de verwerkingstijd opnieuw te meten. Spaties, accenten en leestekens blijven behouden en de volgorde van alle alinea’s verandert tijdens de metingen niet. "
+direction = "ltr"
+script = "Latn"
+language = "nl"

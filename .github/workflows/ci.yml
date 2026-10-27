@@ -1,0 +1,43 @@
+name: checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.95.0
+        with:
+          components: rustfmt, clippy
+      - uses: actions/cache@v4
+        with:
+          path: vendor
+          key: assets-${{ hashFiles('assets.lock.json') }}
+      - run: cargo test --locked -p shaping-core
+      - run: python3 lab.py fetch
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
+      - run: cargo test --locked --workspace
+      - run: cargo test --release --locked --workspace --all-features
+      - run: cargo run --locked --release -- compare --out results/compare.json
+      - run: cargo bench --locked --bench shaping -- --test
+      - run: cargo bench --locked --bench shaping -- --test
+        env:
+          SHAPING_SUITE: stages
+          SHAPING_CASE: mixed-fonts
+      - run: cargo bench --locked --bench shaping -- --test
+        env:
+          SHAPING_SUITE: stream
+          SHAPING_CASE: mixed-fonts
+      - run: python3 lab.py upstream official-smoke --filter Roboto --seconds 0.01 --samples 10
+      - run: cargo bench --locked --bench shaping -- --test
+        env:
+          SHAPING_SUITE: batch
+          SHAPING_CASE: mixed-fonts
+          SHAPING_BATCH_SIZES: "1,5,513"
+          SHAPING_WORKERS: "1,4"
+          SHAPING_MIN_RUNS_PER_WORKER: "1"

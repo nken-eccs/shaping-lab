@@ -1,0 +1,94 @@
+schema_version = 1
+
+[fonts.latin]
+path = "../vendor/fonts/notosans.ttf"
+sha256 = "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+
+[fonts.arabic]
+path = "../vendor/fonts/notosansarabic.ttf"
+sha256 = "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+
+[fonts.devanagari]
+path = "../vendor/fonts/notosansdevanagari.ttf"
+sha256 = "14ec4af41f27482216d1c2229f417ff9b1425e1babb014e57d1d40d03229853e"
+
+[fonts.japanese]
+path = "../vendor/fonts/notosansjp.ttf"
+sha256 = "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f"
+
+[fonts.thai]
+path = "../vendor/fonts/notosansthai.ttf"
+sha256 = "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8"
+
+[fonts.hebrew]
+path = "../vendor/fonts/notosanshebrew.ttf"
+sha256 = "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+
+[[cases]]
+id = "mixed-fonts"
+description = "Four scripts and four fonts"
+[[cases.runs]]
+font = "latin"
+text = "Rust typography "
+direction = "ltr"
+script = "Latn"
+language = "en"
+[[cases.runs]]
+font = "japanese"
+text = "日本語の組版 "
+direction = "ltr"
+script = "Hani"
+language = "ja"
+[[cases.runs]]
+font = "arabic"
+text = "العربية"
+direction = "rtl"
+script = "Arab"
+language = "ar"
+[[cases.runs]]
+font = "devanagari"
+text = " नमस्ते"
+direction = "ltr"
+script = "Deva"
+language = "hi"
+
+[[cases]]
+id = "latin-variable"
+description = "Weight and width variations"
+[[cases.runs]]
+font = "latin"
+text = "office AVATAR Typography"
+direction = "ltr"
+script = "Latn"
+language = "en"
+variations = { wght = 725.0, wdth = 80.0 }
+
+[[cases]]
+id = "latin-default"
+description = "Same text at default coordinates"
+[[cases.runs]]
+font = "latin"
+text = "office AVATAR Typography"
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "japanese-vertical"
+description = "Japanese vertical substitutions"
+[[cases.runs]]
+font = "japanese"
+text = "縦書き「かな」、。ー（）"
+direction = "ttb"
+script = "Hani"
+language = "ja"
+
+[[cases]]
+id = "japanese-horizontal-control"
+description = "Same text in horizontal direction"
+[[cases.runs]]
+font = "japanese"
+text = "縦書き「かな」、。ー（）"
+direction = "ltr"
+script = "Hani"
+language = "ja"

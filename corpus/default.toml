@@ -1,0 +1,256 @@
+schema_version = 1
+
+[fonts.latin]
+path = "../vendor/fonts/notosans.ttf"
+sha256 = "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d"
+
+[fonts.arabic]
+path = "../vendor/fonts/notosansarabic.ttf"
+sha256 = "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+
+[fonts.devanagari]
+path = "../vendor/fonts/notosansdevanagari.ttf"
+sha256 = "14ec4af41f27482216d1c2229f417ff9b1425e1babb014e57d1d40d03229853e"
+
+[fonts.japanese]
+path = "../vendor/fonts/notosansjp.ttf"
+sha256 = "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f"
+
+[fonts.thai]
+path = "../vendor/fonts/notosansthai.ttf"
+sha256 = "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8"
+
+[fonts.hebrew]
+path = "../vendor/fonts/notosanshebrew.ttf"
+sha256 = "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+
+[[cases]]
+id = "empty"
+description = "Empty input"
+[[cases.runs]]
+font = "latin"
+text = ""
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "latin-ligatures"
+description = "Latin ligatures and kerning"
+[[cases.runs]]
+font = "latin"
+text = "office affine ffi AVATAR To Wa"
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "latin-no-ligatures"
+description = "Ligatures disabled"
+[[cases.runs]]
+font = "latin"
+text = "office affine ffi AVATAR To Wa"
+direction = "ltr"
+script = "Latn"
+language = "en"
+features = [{ tag = "liga", value = 0 }, { tag = "clig", value = 0 }]
+
+[[cases]]
+id = "latin-range-feature"
+description = "Feature range in UTF-8 bytes"
+[[cases.runs]]
+font = "latin"
+text = "é office affine"
+direction = "ltr"
+script = "Latn"
+language = "en"
+features = [{ tag = "liga", value = 0, start = 3, end = 9 }]
+
+[[cases]]
+id = "latin-combining"
+description = "Combining marks and normalization"
+[[cases.runs]]
+font = "latin"
+text = "á ë ñ Å á é Å"
+direction = "ltr"
+script = "Latn"
+language = "en"
+cluster_level = "monotone-characters"
+flags = ["unsafe-to-concat"]
+
+[[cases]]
+id = "latin-variable"
+description = "Weight and width variations"
+[[cases.runs]]
+font = "latin"
+text = "office AVATAR Typography"
+direction = "ltr"
+script = "Latn"
+language = "en"
+variations = { wght = 725.0, wdth = 80.0 }
+
+[[cases]]
+id = "latin-paragraph"
+description = "Long Latin run"
+[[cases.runs]]
+font = "latin"
+text = "Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR. Typography combines glyph selection, positioning, ligatures, kerning and marks. Variable fonts change width and weight. office affine AVATAR."
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "arabic"
+description = "Arabic joining and marks"
+[[cases.runs]]
+font = "arabic"
+text = "السَّلَامُ عَلَيْكُمْ العربية"
+direction = "rtl"
+script = "Arab"
+language = "ar"
+flags = ["unsafe-to-concat", "safe-to-insert-tatweel"]
+
+[[cases]]
+id = "arabic-context"
+description = "Arabic run boundaries with context"
+[[cases.runs]]
+font = "arabic"
+text = "سل"
+direction = "rtl"
+script = "Arab"
+language = "ar"
+post_context = "ام"
+[[cases.runs]]
+font = "arabic"
+text = "ام"
+direction = "rtl"
+script = "Arab"
+language = "ar"
+pre_context = "سل"
+
+[[cases]]
+id = "hebrew"
+description = "Hebrew points"
+[[cases.runs]]
+font = "hebrew"
+text = "שָׁלוֹם עוֹלָם"
+direction = "rtl"
+script = "Hebr"
+language = "he"
+
+[[cases]]
+id = "devanagari"
+description = "Devanagari reordering and conjuncts"
+[[cases.runs]]
+font = "devanagari"
+text = "नमस्ते दुनिया क्षि प्रार्थना"
+direction = "ltr"
+script = "Deva"
+language = "hi"
+
+[[cases]]
+id = "thai"
+description = "Thai combining marks"
+[[cases.runs]]
+font = "thai"
+text = "สวัสดี ภาษาไทย น้ำ"
+direction = "ltr"
+script = "Thai"
+language = "th"
+
+[[cases]]
+id = "japanese"
+description = "Japanese horizontal text"
+[[cases.runs]]
+font = "japanese"
+text = "日本語の組版「かな」と漢字、句読点。"
+direction = "ltr"
+script = "Hani"
+language = "ja"
+
+[[cases]]
+id = "japanese-vertical"
+description = "Japanese vertical substitutions"
+[[cases.runs]]
+font = "japanese"
+text = "縦書き「かな」、。ー（）"
+direction = "ttb"
+script = "Hani"
+language = "ja"
+
+[[cases]]
+id = "default-ignorables"
+description = "ZWJ ZWNJ and soft hyphen"
+[[cases.runs]]
+font = "latin"
+text = "of‍fice a‌b co­operate"
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "missing-glyph"
+description = "Deliberate missing glyph"
+[[cases.runs]]
+font = "latin"
+text = "A􏿿B"
+direction = "ltr"
+script = "Latn"
+language = "en"
+
+[[cases]]
+id = "mixed-fonts"
+description = "Four scripts and four fonts"
+[[cases.runs]]
+font = "latin"
+text = "Rust typography "
+direction = "ltr"
+script = "Latn"
+language = "en"
+[[cases.runs]]
+font = "japanese"
+text = "日本語の組版 "
+direction = "ltr"
+script = "Hani"
+language = "ja"
+[[cases.runs]]
+font = "arabic"
+text = "العربية"
+direction = "rtl"
+script = "Arab"
+language = "ar"
+[[cases.runs]]
+font = "devanagari"
+text = " नमस्ते"
+direction = "ltr"
+script = "Deva"
+language = "hi"
+
+[[cases]]
+id = "font-switches"
+description = "Same script with alternating fonts"
+[[cases.runs]]
+font = "latin"
+text = "office "
+direction = "ltr"
+script = "Latn"
+language = "en"
+[[cases.runs]]
+font = "japanese"
+text = "office "
+direction = "ltr"
+script = "Latn"
+language = "en"
+[[cases.runs]]
+font = "latin"
+text = "AVATAR "
+direction = "ltr"
+script = "Latn"
+language = "en"
+[[cases.runs]]
+font = "japanese"
+text = "AVATAR"
+direction = "ltr"
+script = "Latn"
+language = "en"
+
